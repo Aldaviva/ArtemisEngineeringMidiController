@@ -48,6 +48,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -56,6 +57,10 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="ThrottleDebounce, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThrottleDebounce\ThrottleDebounce\bin\Debug\netstandard2.0\ThrottleDebounce.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
@@ -69,11 +74,14 @@
     <Compile Include="ArtemisManager.cs" />
     <Compile Include="EngineeringSystem.cs" />
     <Compile Include="Trainer\Game.cs" />
-    <Compile Include="Trainer\InterprocessMemoryProperty.cs" />
+    <Compile Include="GameClicker.cs" />
+    <Compile Include="InterprocessMemoryProperty.cs" />
     <Compile Include="Trainer\MemoryAddresses.cs" />
     <Compile Include="Trainer\MemoryEditor.cs" />
+    <Compile Include="Trainer\ProcessHandle.cs" />
     <Compile Include="Trainer\TrainerService.cs" />
     <Compile Include="Trainer\Win32.cs" />
+    <Compile Include="Win32.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

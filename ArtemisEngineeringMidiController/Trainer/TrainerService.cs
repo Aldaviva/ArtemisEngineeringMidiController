@@ -37,7 +37,8 @@ internal class TrainerServiceImpl: TrainerService {
     public TrainerServiceImpl() {
         isAttachedToGame = attachmentState;
 
-        attachmentState.PropertyChanged += (_, args) => Trace.WriteLine($"Trainer state: {args.NewValue}");
+        attachmentState.PropertyChanged += (_, args) =>
+            Console.WriteLine($"Trainer state: {args.NewValue}{(args.NewValue == AttachmentState.ATTACHED ? $" to PID {ProcessHandleProvider.processHandle?.process.Id}" : "")}");
     }
 
     public void monitorProperty(ManuallyRecalculatedProperty property) {
